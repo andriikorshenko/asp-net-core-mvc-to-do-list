@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TI1vHcZM+l5KoS8n3uKyAsKQ1urETAQgiX7TeV0cY4s=",
+  "Hash": "Y7fxPMngZdIej1kHChJMYAW6VEdUqxy2eO0NpCD7ti8=",
   "Source": "ToDoListWeb",
   "BasePath": "_content/ToDoListWeb",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Projects\\asp-net-core-mvc-to-do-list\\ToDoList\\ToDoListWeb\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "ToDoListWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Projects\\asp-net-core-mvc-to-do-list\\ToDoList\\ToDoListWeb\\wwwroot\\",
+      "BasePath": "_content/ToDoListWeb",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Projects\\asp-net-core-mvc-to-do-list\\ToDoList\\ToDoListWeb\\wwwroot\\favicon.ico",
