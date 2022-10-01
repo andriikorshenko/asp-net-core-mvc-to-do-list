@@ -13,7 +13,6 @@ namespace ToDoListWeb.Controllers
             _db = db;
         }
 
-        [Route("")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -23,8 +22,7 @@ namespace ToDoListWeb.Controllers
 
         public IActionResult Create()
         {
-            IEnumerable<Assignment> objAssignmentList = _db.Assignments;
-            return View(objAssignmentList);
+            return View();
         }
     }
 }
