@@ -13,7 +13,15 @@ namespace ToDoListWeb.Controllers
             _db = db;
         }
 
+        [Route("")]
+        [HttpGet]
         public IActionResult Index()
+        {
+            IEnumerable<Assignment> objAssignmentList = _db.Assignments;
+            return View(objAssignmentList);
+        }
+
+        public IActionResult Create()
         {
             IEnumerable<Assignment> objAssignmentList = _db.Assignments;
             return View(objAssignmentList);
