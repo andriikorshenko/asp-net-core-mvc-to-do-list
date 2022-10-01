@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3P9Q/0yP7E+wkGAy2q4FZAAAAAACAAAAAAAQZgAAAAEAACAAAABUPCyDooVPXlgw6gKjCPSuy3lHrGBG26OMr9X4LqtMkQAAAAAOgAAAAAIAACAAAADzvUeWuXkpcGfc/1a8DU/EeR2P7vVvEPYVo71C9QNJb4AAAAAzMEidT2Mx77ZxD0dmTrAmZ3Kmb0NLfIZxXSi0NPnEMU1qQVEQHnCe83Q2WY7WWk9gU+AgUJd6Auu9GfRJk9V7JVvNVObM02VtVLl08dfsVeR4SAn20KiqnMH9Zekda1hEFJqeHScZ4f7L6oW/vSWlsO7UY6l+YgYlRpVJJe2g9UAAAAATSe/vQtJ+hzvCVCFbfbsqarB/elsTMguL3UO/w2d9Eb4sFEsGNU9t2Bzwp+qTyOY803TxXRdU/IwnZcNiv18h</EncryptedPassword>
+    <History>True|2022-10-01T20:04:18.6428657Z;True|2022-10-01T22:59:07.4086427+03:00;False|2022-10-01T22:54:43.3715716+03:00;False|2022-10-01T22:50:12.0471974+03:00;False|2022-10-01T22:47:54.8081549+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:amazing-to-do-list-server.database.windows.net,1433%3bInitial Catalog=amaizing-db%3bPersist Security Info=False%3bUser ID=amaizing%3bPassword=94423211Aa%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
