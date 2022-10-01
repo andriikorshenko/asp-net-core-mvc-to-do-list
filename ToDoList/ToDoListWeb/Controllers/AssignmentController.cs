@@ -69,5 +69,38 @@ namespace ToDoListWeb.Controllers
             }
             return View(obj);
         }
+
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var findById = _db.Assignments.Find(id);
+
+            if (findById == null)
+            {
+                return NotFound();
+            }
+
+            return View(findById);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.Assignments.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _db.Assignments.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Assignment>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Home";
 }
 
 <div class="container p-3">
@@ -37,12 +37,14 @@
                     <td width="15%">
                         @item.Name
                     </td>
-                    <td width="80%">
+                    <td width="71%">
                         @item.Text
                     </td>
                     <td>
                         <div class="w-75 btn-group" role="group">
                             <a asp-controller="Assignment" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <p>⠀</p>
+                            <a asp-controller="Assignment" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3"></i>Delete</a>
                         </div>
                     </td>
                 </tr>
