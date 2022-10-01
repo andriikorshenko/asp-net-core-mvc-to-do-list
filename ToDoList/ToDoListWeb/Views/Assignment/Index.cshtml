@@ -25,17 +25,25 @@
                 <th>
                     Text
                 </th>
+                <th>
+                    Options
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td width="20%">
+                    <td width="15%">
                         @item.Name
                     </td>
                     <td width="80%">
                         @item.Text
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-controller="Assignment" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                        </div>
                     </td>
                 </tr>
             }

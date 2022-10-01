@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoListWeb.Data;
+using ToDoListWeb;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Assignment}/{action=Index}/{id?}");
+    pattern: "{controller}/{action}/{id?}");
 
 app.Run();

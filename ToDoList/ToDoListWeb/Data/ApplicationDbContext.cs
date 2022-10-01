@@ -1,12 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ToDoListWeb.Models;
 
-namespace ToDoListWeb.Data
+namespace ToDoListWeb
 {
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         public DbSet<Assignment> Assignments { get; set; }
 
@@ -17,6 +20,9 @@ namespace ToDoListWeb.Data
 
             modelBuilder.Entity<Assignment>()
                 .Property(x => x.Text).IsRequired();
+
+            modelBuilder.Entity<Assignment>()
+                .Property(x => x.Name).IsRequired();
         }
     }
 }

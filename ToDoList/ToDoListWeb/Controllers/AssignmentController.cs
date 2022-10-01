@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ToDoListWeb.Data;
 using ToDoListWeb.Models;
 
 namespace ToDoListWeb.Controllers
@@ -14,6 +13,7 @@ namespace ToDoListWeb.Controllers
         }
 
         [HttpGet]
+        [Route("")]
         public IActionResult Index()
         {
             IEnumerable<Assignment> objAssignmentList = _db.Assignments.OrderByDescending(x => x.CreatedAt);
@@ -33,6 +33,37 @@ namespace ToDoListWeb.Controllers
             if (ModelState.IsValid)
             {
                 _db.Assignments.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var findById = _db.Assignments.Find(id);
+
+            if (findById == null)
+            {
+                return NotFound();
+            }
+
+            return View(findById);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Assignment obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Assignments.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }

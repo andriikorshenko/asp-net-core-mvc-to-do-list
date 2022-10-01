@@ -1,10 +1,10 @@
-﻿using ToDoListWeb.Data;
+﻿using ToDoListWeb;
 
 namespace ToDoListWeb.Models
 {
     public class Assignment
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; } = "Unnamed";
 
