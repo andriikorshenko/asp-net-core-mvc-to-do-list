@@ -6,10 +6,7 @@ namespace ToDoListWeb
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-            Database.EnsureCreated();
-        }
+            : base(options) => Database.EnsureCreated();
 
         public DbSet<Assignment> Assignments { get; set; }
 
