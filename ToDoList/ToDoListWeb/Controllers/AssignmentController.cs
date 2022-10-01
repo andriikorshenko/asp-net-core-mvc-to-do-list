@@ -34,6 +34,7 @@ namespace ToDoListWeb.Controllers
             {
                 _db.Assignments.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully!";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -65,6 +66,7 @@ namespace ToDoListWeb.Controllers
             {
                 _db.Assignments.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category updated successfully!";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -100,6 +102,7 @@ namespace ToDoListWeb.Controllers
 
             _db.Assignments.Remove(obj);
             _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully!";
             return RedirectToAction("Index");
         }
     }
