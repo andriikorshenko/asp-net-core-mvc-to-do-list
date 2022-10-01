@@ -16,7 +16,7 @@ namespace ToDoListWeb.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            IEnumerable<Assignment> objAssignmentList = _db.Assignments;
+            IEnumerable<Assignment> objAssignmentList = _db.Assignments.OrderByDescending(x => x.CreatedAt);
             return View(objAssignmentList);
         }
 
@@ -30,9 +30,13 @@ namespace ToDoListWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Assignment obj)
         {
-            _db.Assignments.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _db.Assignments.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
         }
     }
 }

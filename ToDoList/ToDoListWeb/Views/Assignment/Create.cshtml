@@ -9,13 +9,16 @@
             <h2 class="text-light">Create Assignment</h2>
             <hr />
         </div>
+        @*<div asp-validation-summary="All"></div>*@
         <div class="mb-3">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Text"></label>
             <input asp-for="Text" class="form-control">
+            <span asp-validation-for="Text" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">
             <i class="bi bi-check-square"></i> &nbsp; Create
@@ -25,3 +28,7 @@
         </a>
     </div>
 </form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
